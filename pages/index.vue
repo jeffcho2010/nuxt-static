@@ -16,7 +16,7 @@ import request from "axios";
 const getPosts = function() {
   console.log("Request to posts");
   return new Promise((resolve, reject) => {
-    request.defaults.baseURL = "https://nuxt.craftedup.com/wp-json/wp/v2";
+    request.defaults.baseURL = "https://blockstudio.tw/wp-json/wp/v2";
     request.get(`posts`).then(response => {
       const data = [...response.data];
       if (response.status === 200 && response.data.length > 0) {
@@ -52,7 +52,7 @@ export default {
   methods: {
     getPost(slug) {
       return new Promise((resolve, reject) => {
-        request.defaults.baseURL = "https://nuxt.craftedup.com/wp-json/wp/v2";
+        request.defaults.baseURL = "https://blockstudio.tw/wp-json/wp/v2";
         request.get(`posts?slug=${slug}`).then(response => {
           const data = [...response.data][0];
           if (response.status === 200 && response.data.length > 0) {
