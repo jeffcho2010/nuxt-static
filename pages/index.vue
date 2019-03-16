@@ -3,20 +3,20 @@
     <div>
       <Title/>
       <div class="links">
-        <nuxt-link to="/about">About</nuxt-link>
+        <nuxt-link to="/about">關於</nuxt-link>
       </div>
     </div>
   </section>
 </template>
 
 <script>
-import Title from '~/components/Title.vue'
+import Title from "~/components/Title.vue";
 
 export default {
   components: {
     Title
   }
-}
+};
 </script>
 
 <style>
