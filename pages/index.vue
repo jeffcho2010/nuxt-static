@@ -4,7 +4,11 @@
       <Title/>
       <div class="links">
         <nuxt-link to="/about">關於</nuxt-link>
-        {{posts}}
+        <!-- {{posts}} -->
+        <article v-for="post in posts" :key="post.id">
+          <h2>{{post.title}}</h2>
+          <p>{{post.excerpt}}</p>
+        </article>
       </div>
     </div>
   </section>
